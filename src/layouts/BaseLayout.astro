@@ -1,0 +1,123 @@
+---
+import '../styles/fonts.css';
+import '../styles/global.css';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+interface FAQItem {
+  question: string;
+  answer: string;
+}
+
+interface Props {
+  title: string;
+  description: string;
+  faqSchema?: FAQItem[];
+}
+
+const { title, description, faqSchema } = Astro.props;
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const siteName = 'Leakproof Marketing';
+
+// Breadcrumb schema
+const pathSegments = Astro.url.pathname.split('/').filter(Boolean);
+const breadcrumbItems = [
+  { '@type': 'ListItem', position: 1, name: 'Home', item: `${Astro.site}` },
+];
+pathSegments.forEach((segment, index) => {
+  const name = segment.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
+  const item = `${Astro.site}${pathSegments.slice(0, index + 1).join('/')}/`;
+  breadcrumbItems.push({ '@type': 'ListItem', position: index + 2, name, item });
+});
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: breadcrumbItems,
+};
+
+// FAQ schema
+const faqPageSchema = faqSchema ? {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqSchema.map(faq => ({
+    '@type': 'Question',
+    name: faq.question,
+    acceptedAnswer: { '@type': 'Answer', text: faq.answer },
+  })),
+} : null;
+
+// ProfessionalService schema
+const businessSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ProfessionalService',
+  '@id': 'https://leakproofmarketing.com/#business',
+  name: 'Leakproof Marketing',
+  description: 'Digital marketing agency specializing in websites, SEO, content, and Google Ads for counselors and pelvic floor physical therapists.',
+  url: 'https://leakproofmarketing.com',
+  email: 'hello@leakproofmarketing.com',
+  founder: {
+    '@type': 'Person',
+    name: 'Koa Kauwe',
+    jobTitle: 'Founder',
+  },
+  areaServed: { '@type': 'Country', name: 'United States' },
+  priceRange: '$$',
+  hasOfferCatalog: {
+    '@type': 'OfferCatalog',
+    name: 'Digital Marketing Services',
+    itemListElement: [
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Website Design & Development' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Search Engine Optimization' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Google Ads Management' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Content Marketing' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Video Production' } },
+    ],
+  },
+};
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{title}</title>
+  <meta name="description" content={description} />
+  <link rel="canonical" href={canonicalURL} />
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <meta name="theme-color" content="#4A6FA5" />
+
+  <!-- OpenGraph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content={canonicalURL} />
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:site_name" content={siteName} />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Font preloads -->
+  <link rel="preload" href="/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin />
+
+  <!-- Structured Data -->
+  <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(businessSchema)} />
+  {faqPageSchema && <script type="application/ld+json" set:html={JSON.stringify(faqPageSchema)} />}
+
+  <slot name="head" />
+</head>
+<body>
+  <a class="skip-to-content" href="#main-content">Skip to content</a>
+  <Header />
+  <main id="main-content">
+    <slot />
+  </main>
+  <Footer />
+</body>
+</html>

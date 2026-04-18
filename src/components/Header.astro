@@ -1,0 +1,293 @@
+---
+// Simple sticky header with anchor links for one-page site
+---
+
+<header class="site-header">
+  <div class="header-container">
+    <a href="/" class="logo" aria-label="Leakproof Marketing home">
+      <span class="logo-icon">&#x1F6A0;</span>
+      <span class="logo-text">Leakproof</span>
+    </a>
+
+    <!-- Mobile hamburger toggle -->
+    <input type="checkbox" id="nav-toggle" class="nav-toggle-checkbox" aria-hidden="true" />
+    <label for="nav-toggle" class="nav-toggle" aria-label="Toggle navigation menu">
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+    </label>
+
+    <!-- Backdrop -->
+    <label for="nav-toggle" class="nav-backdrop" aria-hidden="true"></label>
+
+    <nav class="main-nav" aria-label="Main navigation">
+      <ul class="nav-links">
+        <li><a href="#difference">Why Us</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#results">Results</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#about">About</a></li>
+      </ul>
+      <a href="#contact" class="nav-cta">Book a Free Call</a>
+    </nav>
+  </div>
+</header>
+
+<!-- Mobile sticky CTA bar -->
+<div class="mobile-cta-bar">
+  <a href="mailto:hello@leakproofmarketing.com" class="mobile-cta-link">Email Us</a>
+  <a href="#contact" class="mobile-cta-primary">Book Free Call</a>
+</div>
+
+<style>
+  .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: var(--white);
+    border-bottom: 2px solid var(--slate-blue);
+    padding: 0;
+  }
+
+  .header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 72px;
+  }
+
+  /* Logo */
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    color: var(--text-dark);
+    flex-shrink: 0;
+  }
+
+  .logo-icon {
+    font-size: 24px;
+    display: none; /* Hide emoji for now, replace with SVG later */
+  }
+
+  .logo-text {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    color: var(--slate-blue);
+  }
+
+  /* Desktop nav */
+  .main-nav {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .nav-links {
+    display: flex;
+    list-style: none;
+    gap: 4px;
+    margin: 0;
+    padding: 0;
+  }
+
+  .nav-links a {
+    display: block;
+    padding: 8px 16px;
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--text-medium);
+    text-decoration: none;
+    border-radius: 6px;
+    transition: all var(--transition-smooth);
+  }
+
+  .nav-links a:hover {
+    color: var(--slate-blue);
+    background: var(--off-white);
+  }
+
+  .nav-cta {
+    display: inline-block;
+    margin-left: 16px;
+    padding: 10px 24px;
+    background: var(--slate-blue);
+    color: var(--white) !important;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all var(--transition-smooth);
+    white-space: nowrap;
+  }
+
+  .nav-cta:hover {
+    background: var(--slate-blue-dark);
+    transform: translateY(-1px);
+  }
+
+  /* Hamburger toggle — hidden on desktop */
+  .nav-toggle-checkbox {
+    display: none;
+  }
+
+  .nav-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    z-index: 110;
+    position: relative;
+  }
+
+  .hamburger-line {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: var(--text-dark);
+    border-radius: 2px;
+    transition: all 0.3s ease;
+  }
+
+  .nav-backdrop {
+    display: none;
+  }
+
+  /* Mobile CTA bar — hidden on desktop */
+  .mobile-cta-bar {
+    display: none;
+  }
+
+  /* ---- Mobile ---- */
+  @media (max-width: 900px) {
+    .header-container {
+      padding: 0 20px;
+    }
+
+    .nav-toggle {
+      display: flex;
+    }
+
+    .main-nav {
+      position: fixed;
+      top: 0;
+      right: -320px;
+      width: 300px;
+      height: 100vh;
+      background: var(--white);
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 80px 32px 32px;
+      gap: 8px;
+      z-index: 105;
+      transition: right 0.3s ease;
+      box-shadow: -4px 0 16px rgba(0,0,0,0.1);
+    }
+
+    .nav-links {
+      flex-direction: column;
+      gap: 0;
+      width: 100%;
+    }
+
+    .nav-links a {
+      padding: 14px 0;
+      font-size: 18px;
+      border-bottom: 1px solid var(--border-light);
+      border-radius: 0;
+    }
+
+    .nav-cta {
+      margin-left: 0;
+      margin-top: 16px;
+      width: 100%;
+      text-align: center;
+      padding: 14px 24px;
+    }
+
+    .nav-backdrop {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.4);
+      z-index: 100;
+      cursor: pointer;
+    }
+
+    /* When toggle is checked */
+    .nav-toggle-checkbox:checked ~ .main-nav {
+      right: 0;
+    }
+
+    .nav-toggle-checkbox:checked ~ .nav-backdrop {
+      display: block;
+    }
+
+    .nav-toggle-checkbox:checked ~ .nav-toggle .hamburger-line:nth-child(1) {
+      transform: translateY(7px) rotate(45deg);
+    }
+    .nav-toggle-checkbox:checked ~ .nav-toggle .hamburger-line:nth-child(2) {
+      opacity: 0;
+    }
+    .nav-toggle-checkbox:checked ~ .nav-toggle .hamburger-line:nth-child(3) {
+      transform: translateY(-7px) rotate(-45deg);
+    }
+
+    /* Mobile sticky CTA */
+    .mobile-cta-bar {
+      display: flex;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 90;
+      background: var(--white);
+      border-top: 1px solid var(--border-light);
+      padding: 10px 16px;
+      gap: 10px;
+      box-shadow: 0 -2px 8px rgba(0,0,0,0.08);
+    }
+
+    .mobile-cta-link {
+      flex: 1;
+      text-align: center;
+      padding: 12px;
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--slate-blue);
+      border: 2px solid var(--slate-blue);
+      border-radius: 8px;
+      text-decoration: none;
+    }
+
+    .mobile-cta-primary {
+      flex: 1;
+      text-align: center;
+      padding: 12px;
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--white);
+      background: var(--slate-blue);
+      border-radius: 8px;
+      text-decoration: none;
+    }
+
+    /* Add bottom padding to body so content isn't hidden behind CTA bar */
+    :global(body) {
+      padding-bottom: 70px;
+    }
+  }
+</style>

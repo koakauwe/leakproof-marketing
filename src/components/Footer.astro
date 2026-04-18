@@ -1,0 +1,133 @@
+---
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="site-footer">
+  <div class="footer-accent"></div>
+  <div class="footer-container">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <span class="footer-logo">Leakproof</span>
+        <p class="footer-tagline">Digital marketing for counselors and pelvic floor physical therapists.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-heading">Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="#services">Services</a></li>
+          <li><a href="#results">Results</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-heading">Get In Touch</h4>
+        <ul class="footer-links">
+          <li><a href="mailto:hello@leakproofmarketing.com">hello@leakproofmarketing.com</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; {currentYear} Leakproof Marketing. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .site-footer {
+    background: var(--text-dark);
+    color: rgba(255, 255, 255, 0.7);
+    position: relative;
+  }
+
+  .footer-accent {
+    height: 3px;
+    background: linear-gradient(90deg, var(--slate-blue), var(--warm-gold));
+  }
+
+  .footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 40px 32px;
+  }
+
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr;
+    gap: 48px;
+    margin-bottom: 48px;
+  }
+
+  .footer-logo {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--white);
+    display: block;
+    margin-bottom: 12px;
+  }
+
+  .footer-tagline {
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.6);
+    line-height: 1.6;
+    max-width: 280px;
+  }
+
+  .footer-heading {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 16px;
+    letter-spacing: 0;
+  }
+
+  .footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .footer-links li {
+    margin-bottom: 10px;
+  }
+
+  .footer-links a {
+    color: rgba(255, 255, 255, 0.6);
+    text-decoration: none;
+    font-size: 15px;
+    transition: color var(--transition-smooth);
+  }
+
+  .footer-links a:hover {
+    color: var(--warm-gold);
+  }
+
+  .footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 24px;
+    text-align: center;
+  }
+
+  .footer-bottom p {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.4);
+    margin: 0;
+  }
+
+  @media (max-width: 768px) {
+    .footer-container {
+      padding: 40px 20px 24px;
+    }
+
+    .footer-grid {
+      grid-template-columns: 1fr;
+      gap: 32px;
+    }
+  }
+</style>

@@ -1,0 +1,835 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const faqSchema = [
+  {
+    question: 'What is SEO?',
+    answer: 'SEO stands for Search Engine Optimization. It means making your website show up when someone searches Google for the services you offer. If a patient in your city types "pelvic floor therapy near me," SEO is what determines whether they find you or your competitor.',
+  },
+  {
+    question: "Why can't I just use Instagram to get patients?",
+    answer: "Instagram is great for building community, but it's not where people go when they need help right now. When someone has a health concern, they search Google — not Instagram. SEO and Google Ads put you in front of people who are actively looking for a provider today.",
+  },
+  {
+    question: 'What makes Google Ads different for healthcare?',
+    answer: "Google has strict rules about advertising health services. Certain conditions can't be targeted directly, and certain ad language gets rejected. On top of that, sensitive health searches shouldn't follow users around the internet — someone searching for help with painful intercourse shouldn't see those ads on a shared family computer. We know how to work within these rules.",
+  },
+  {
+    question: 'How long until I see results?',
+    answer: "You'll have a live website within the first month. SEO takes longer — typically 3 to 6 months to start seeing consistent organic traffic. Google Ads can generate leads within the first week of launching.",
+  },
+  {
+    question: 'Do I own my website?',
+    answer: "Yes. The code, the content, the domain — it's all yours. If you ever decide to leave, everything transfers to you. We don't hold your website hostage.",
+  },
+  {
+    question: "What does 'one client per market' mean?",
+    answer: "It means we only work with one practice of your type in your geographic area. If you're a pelvic floor PT in Austin, we won't take on another pelvic floor PT in Austin. Your marketing strategy shouldn't compete against itself.",
+  },
+  {
+    question: "I'm not sure I need all of this. Can I start small?",
+    answer: "Absolutely. The Starter tier at $300 per month is designed for practices that just need a solid website and basic upkeep. You can always add more later as your practice grows.",
+  },
+];
+---
+
+<BaseLayout
+  title="Leakproof Marketing — Digital Marketing for Pelvic Floor PTs & Counselors"
+  description="We help pelvic floor physical therapists and counselors get found online with websites, SEO, Google Ads, and content built for your world. One client per market."
+  faqSchema={faqSchema}
+>
+
+  <!-- ==================== HERO ==================== -->
+  <section class="lp-hero" id="hero">
+    <div class="container">
+      <div class="lp-hero-content">
+        <span class="lp-hero-badge">Marketing for Healthcare Practices</span>
+        <h1>Your Patients Are Looking for You.<br />They Just Can't Find You.</h1>
+        <p class="lp-hero-sub">We help pelvic floor PTs and counselors get found online — with websites, SEO, and Google Ads built for your world.</p>
+        <div class="lp-hero-actions">
+          <a href="#contact" class="btn-gold">Book a Free Strategy Call</a>
+          <a href="#services" class="lp-hero-link">See What We Do &darr;</a>
+        </div>
+        <p class="lp-hero-note">One client per market. No competing against ourselves.</p>
+      </div>
+    </div>
+    <div class="lp-hero-shape" aria-hidden="true"></div>
+  </section>
+
+  <!-- ==================== WHY WE'RE DIFFERENT ==================== -->
+  <section class="bg-off-white" id="difference">
+    <div class="container">
+      <div class="text-container">
+        <span class="section-label">Why We're Different</span>
+        <h2>We Spent a Decade Inside the Agency World. We Know What Goes Wrong.</h2>
+        <p class="lp-section-intro">After years of working with hundreds of marketing agencies, we built Leakproof to be the kind of partner we wished existed — one that actually understands your practice.</p>
+      </div>
+      <div class="lp-diff-grid">
+        <div class="lp-diff-card">
+          <div class="lp-diff-icon">&#x1F3AF;</div>
+          <h3>One Client Per Market</h3>
+          <p>If you're our pelvic floor PT in Denver, we're not working with any other PT in Denver. Your success is our success — not a conflict of interest.</p>
+        </div>
+        <div class="lp-diff-card">
+          <div class="lp-diff-icon">&#x1F4AC;</div>
+          <h3>We Speak Your Language</h3>
+          <p>You don't need to explain what a pelvic floor is or why "painful intercourse" needs to be a page on your website. We already get it.</p>
+        </div>
+        <div class="lp-diff-card">
+          <div class="lp-diff-icon">&#x1F512;</div>
+          <h3>Privacy-First Google Ads</h3>
+          <p>Healthcare advertising has rules. We know how to run Google Ads for sensitive health topics without getting your account flagged — or violating your patients' privacy.</p>
+        </div>
+        <div class="lp-diff-card">
+          <div class="lp-diff-icon">&#x1F91D;</div>
+          <h3>No Gatekeeping</h3>
+          <p>Ask us anything — whether you're a client or not. We'd rather help you succeed on your own than watch you waste money on the wrong agency.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== SERVICES ==================== -->
+  <section class="bg-white" id="services">
+    <div class="container">
+      <div class="text-container">
+        <span class="section-label">What We Do</span>
+        <h2>Everything Your Practice Needs to Get Found</h2>
+      </div>
+      <div class="lp-services-grid">
+        <div class="lp-service-card">
+          <div class="lp-service-icon">&#x1F4BB;</div>
+          <h3>Websites That Work</h3>
+          <p>Not just pretty — fast, accessible, and built to convert visitors into patients. Our sites score near-perfect on Google's performance tests while your competitors' sites choke on bloated plugins.</p>
+        </div>
+        <div class="lp-service-card">
+          <div class="lp-service-icon">&#x1F50D;</div>
+          <h3>SEO That Actually Matters</h3>
+          <p>We write the pages your future patients are searching for. When someone Googles "pelvic floor therapy near me," you show up — not your competitor down the street.</p>
+        </div>
+        <div class="lp-service-card">
+          <div class="lp-service-icon">&#x270D;&#xFE0F;</div>
+          <h3>Content That Educates</h3>
+          <p>Blog posts, FAQs, and resources that answer your patients' real questions. We build a content tree so every piece works together to bring patients to your door.</p>
+        </div>
+        <div class="lp-service-card">
+          <div class="lp-service-icon">&#x1F4B0;</div>
+          <h3>Google Ads for Healthcare</h3>
+          <p>Reach patients who are actively searching for help right now — without violating Google's sensitive health policies. We handle strategy, ad copy, and ongoing optimization.</p>
+        </div>
+        <div class="lp-service-card">
+          <div class="lp-service-icon">&#x1F4CD;</div>
+          <h3>Google Business Profile</h3>
+          <p>Your GBP is often the first thing patients see. We keep it active with regular posts, photos, and a review strategy that builds trust before they ever visit your site.</p>
+        </div>
+        <div class="lp-service-card">
+          <div class="lp-service-icon">&#x1F3AC;</div>
+          <h3>Video Production</h3>
+          <p>Short-form educational videos that build trust and show patients the real you. Not polished commercials — genuine content that connects, produced monthly.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== RESULTS ==================== -->
+  <section class="bg-off-white" id="results">
+    <div class="container">
+      <div class="text-container">
+        <span class="section-label">Results</span>
+        <h2>What Happens When Marketing Actually Fits</h2>
+        <p class="lp-section-intro">These aren't hypothetical case studies. These are real practices we work with.</p>
+      </div>
+      <div class="lp-results-grid">
+        <div class="lp-result-card lp-result-active">
+          <div class="lp-result-badge">Active Client</div>
+          <h3><a href="https://radiantpelvichealth.com" target="_blank" rel="noopener" class="lp-result-name">Radiant Pelvic Health & Wellness</a></h3>
+          <p class="lp-result-type">Pelvic Floor Physical Therapy &bull; Utah Valley</p>
+          <ul class="lp-result-metrics">
+            <li>Website built from scratch on a high-performance framework</li>
+            <li>20+ SEO-optimized condition and treatment pages</li>
+            <li>Weekly blog content program launched</li>
+            <li>Google Ads campaigns generating patient inquiries</li>
+            <li>Google Business Profile active with 5-star rating</li>
+            <li>Showing up in AI search results (ChatGPT) within months</li>
+          </ul>
+        </div>
+        <div class="lp-result-card">
+          <div class="lp-result-badge lp-badge-soon">In Progress</div>
+          <h3><a href="https://lotusrosecounseling.com" target="_blank" rel="noopener" class="lp-result-name">Lotus Rose Counseling</a></h3>
+          <p class="lp-result-type">Mental Health Counseling</p>
+          <p class="lp-result-status">Website rebuild and analytics setup underway.</p>
+        </div>
+        <div class="lp-result-card">
+          <div class="lp-result-badge lp-badge-soon">Coming Soon</div>
+          <h3>Your Practice?</h3>
+          <p class="lp-result-type">We're selectively taking on new clients</p>
+          <p class="lp-result-status">If your market is open, let's talk about what we can build together.</p>
+          <a href="#contact" class="lp-result-link">Check availability &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== PRICING ==================== -->
+  <section class="bg-white" id="pricing">
+    <div class="container">
+      <div class="text-container text-center" style="margin: 0 auto;">
+        <span class="section-label">Simple Pricing</span>
+        <h2>No Surprises. No Contracts. No Hidden Fees.</h2>
+        <p class="lp-section-intro">Every engagement starts with a <strong>$1,000 onboarding fee</strong> that covers your website rebuild and initial SEO setup. Then pick the monthly tier that fits.</p>
+      </div>
+      <div class="lp-pricing-grid">
+        <div class="lp-price-card">
+          <h3>Starter</h3>
+          <div class="lp-price">$300<span>/mo</span></div>
+          <ul class="lp-price-features">
+            <li>Website maintenance & updates</li>
+            <li>Monthly content updates</li>
+            <li>Google Business Profile posts</li>
+            <li>Monthly performance check-in</li>
+          </ul>
+        </div>
+        <div class="lp-price-card lp-price-featured">
+          <div class="lp-price-tag">Most Popular</div>
+          <h3>Growth</h3>
+          <div class="lp-price">$500<span>/mo</span></div>
+          <ul class="lp-price-features">
+            <li>Everything in Starter</li>
+            <li>Weekly blog posts (4/month)</li>
+            <li>Weekly GBP posts</li>
+            <li>Ongoing SEO optimization</li>
+          </ul>
+        </div>
+        <div class="lp-price-card">
+          <h3>Accelerate</h3>
+          <div class="lp-price">$900<span>/mo</span></div>
+          <ul class="lp-price-features">
+            <li>Everything in Growth</li>
+            <li>Google Ads management</li>
+            <li>Keyword research & strategy</li>
+            <li>Monthly ad performance reports</li>
+          </ul>
+        </div>
+        <div class="lp-price-card">
+          <h3>Full Service</h3>
+          <div class="lp-price">$1,500<span>/mo</span></div>
+          <ul class="lp-price-features">
+            <li>Everything in Accelerate</li>
+            <li>Monthly video production</li>
+            <li>Social media clips & editing</li>
+            <li>Priority support</li>
+          </ul>
+        </div>
+      </div>
+      <p class="lp-pricing-note">Ad spend is separate from management fees. We'll recommend a budget based on your market.</p>
+      <div class="text-center" style="margin-top: 32px;">
+        <a href="#contact" class="btn-secondary">Not sure which tier? Let's talk.</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FAQ ==================== -->
+  <section class="bg-off-white" id="faq">
+    <div class="container">
+      <div class="text-container">
+        <span class="section-label">Common Questions</span>
+        <h2>You've Got Questions. Good.</h2>
+      </div>
+      <div class="lp-faq-list">
+        {faqSchema.map((faq) => (
+          <details class="faq-item">
+            <summary>{faq.question}</summary>
+            <div class="faq-answer">
+              <p>{faq.answer}</p>
+            </div>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== ABOUT ==================== -->
+  <section class="bg-white" id="about">
+    <div class="container">
+      <div class="lp-about-grid">
+        <div class="lp-about-content">
+          <span class="section-label">Meet Koa</span>
+          <h2>I Spent 10 Years Watching Agencies Get It Wrong.</h2>
+          <p>I've worked inside the digital marketing industry for nearly a decade. I've helped hundreds of agencies with their operations and interviewed nine agency owners a week for months. I've seen practices pour thousands into marketing that never moved the needle — because the agency didn't understand their world.</p>
+          <p>Pelvic floor PTs and counselors have unique challenges. Your services are sensitive. Your patients are nervous. And most agencies treat you like any other small business.</p>
+          <p>I started Leakproof because I believe you deserve a marketing partner who actually understands what you do — and who cares enough to learn the difference between a pelvic floor spasm and pelvic floor weakness before writing your website copy.</p>
+          <p>I'm not trying to build a big agency. I'm trying to help a small number of practices really well. If you have questions — about marketing, about your website, about whether any of this is worth it — <a href="#contact">reach out</a>. I'll give you a straight answer whether you become a client or not.</p>
+        </div>
+        <div class="lp-about-photo">
+          <div class="lp-photo-placeholder">
+            <span>Photo<br/>Coming Soon</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== CONTACT ==================== -->
+  <section class="bg-off-white" id="contact">
+    <div class="container">
+      <div class="lp-contact-wrap">
+        <span class="section-label">Get Started</span>
+        <h2>Let's See If We're a Fit</h2>
+        <p class="lp-section-intro">One quick call. No pitch deck. No pressure. Just a conversation about your practice and whether we can help.</p>
+        <div class="lp-contact-actions">
+          <a href="mailto:hello@leakproofmarketing.com" class="btn-gold">Email hello@leakproofmarketing.com</a>
+        </div>
+        <p class="lp-contact-note">We only take one client per market. If your area is open, let's talk before your competitor does.</p>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>
+
+<style>
+  /* ==================== HERO ==================== */
+  .lp-hero {
+    background: linear-gradient(135deg, #4A6FA5 0%, #3B5A87 40%, #2B2B2B 100%);
+    color: var(--white);
+    padding: 120px 0 140px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .lp-hero-shape {
+    position: absolute;
+    top: -200px;
+    right: -200px;
+    width: 600px;
+    height: 600px;
+    background: rgba(212, 168, 67, 0.08);
+    border-radius: 50%;
+    pointer-events: none;
+  }
+
+  .lp-hero-content {
+    max-width: 720px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .lp-hero-badge {
+    display: inline-block;
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--warm-gold);
+    margin-bottom: 24px;
+  }
+
+  .lp-hero h1 {
+    color: var(--white);
+    font-size: 56px;
+    line-height: 1.1;
+    margin-bottom: 24px;
+  }
+
+  .lp-hero-sub {
+    font-size: 20px;
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.6;
+    margin-bottom: 36px;
+    max-width: 580px;
+  }
+
+  .lp-hero-actions {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    margin-bottom: 32px;
+    flex-wrap: wrap;
+  }
+
+  .lp-hero-link {
+    color: rgba(255, 255, 255, 0.7) !important;
+    font-weight: 500;
+    font-size: 16px;
+    transition: color var(--transition-smooth);
+  }
+  .lp-hero-link:hover {
+    color: var(--white) !important;
+  }
+
+  .lp-hero-note {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.5);
+    font-style: italic;
+    margin: 0;
+  }
+
+  /* ==================== DIFFERENCE ==================== */
+  .lp-section-intro {
+    font-size: 19px;
+    color: var(--text-medium);
+    line-height: 1.7;
+    margin-bottom: 0;
+  }
+
+  .lp-diff-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    margin-top: 48px;
+  }
+
+  .lp-diff-card {
+    background: var(--white);
+    padding: 36px;
+    border-radius: 12px;
+    border: 1px solid var(--border-light);
+    transition: box-shadow var(--transition-smooth);
+  }
+
+  .lp-diff-card:hover {
+    box-shadow: var(--shadow-medium);
+  }
+
+  .lp-diff-icon {
+    font-size: 28px;
+    margin-bottom: 16px;
+  }
+
+  .lp-diff-card h3 {
+    font-size: 22px;
+    margin-bottom: 12px;
+  }
+
+  .lp-diff-card p {
+    font-size: 16px;
+    line-height: 1.7;
+    color: var(--text-medium);
+    margin: 0;
+  }
+
+  /* ==================== SERVICES ==================== */
+  .lp-services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-top: 48px;
+  }
+
+  .lp-service-card {
+    background: var(--off-white);
+    padding: 32px;
+    border-radius: 12px;
+    border-left: 3px solid var(--slate-blue);
+    transition: all var(--transition-smooth);
+  }
+
+  .lp-service-card:hover {
+    box-shadow: var(--shadow-medium);
+    transform: translateY(-2px);
+  }
+
+  .lp-service-icon {
+    font-size: 28px;
+    margin-bottom: 12px;
+  }
+
+  .lp-service-card h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
+  .lp-service-card p {
+    font-size: 15px;
+    line-height: 1.7;
+    color: var(--text-medium);
+    margin: 0;
+  }
+
+  /* ==================== RESULTS ==================== */
+  .lp-results-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-top: 48px;
+  }
+
+  .lp-result-card {
+    background: var(--white);
+    padding: 32px;
+    border-radius: 12px;
+    border: 1px solid var(--border-light);
+    position: relative;
+  }
+
+  .lp-result-active {
+    border-color: var(--warm-gold);
+    border-width: 2px;
+  }
+
+  .lp-result-badge {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--white);
+    background: var(--warm-gold-dark);
+    padding: 4px 12px;
+    border-radius: 20px;
+    margin-bottom: 16px;
+  }
+
+  .lp-badge-soon {
+    background: var(--text-light);
+  }
+
+  .lp-result-card h3 {
+    font-size: 22px;
+    margin-bottom: 8px;
+  }
+
+  .lp-result-type {
+    font-size: 14px;
+    color: var(--text-light);
+    margin-bottom: 16px;
+  }
+
+  .lp-result-metrics {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .lp-result-metrics li {
+    padding: 8px 0;
+    padding-left: 24px;
+    font-size: 15px;
+    color: var(--text-medium);
+    position: relative;
+    border-bottom: 1px solid var(--off-white);
+  }
+
+  .lp-result-metrics li::before {
+    content: '\2713';
+    position: absolute;
+    left: 0;
+    color: var(--warm-gold-dark);
+    font-weight: 700;
+  }
+
+  .lp-result-metrics li:last-child {
+    border-bottom: none;
+  }
+
+  .lp-result-status {
+    font-size: 15px;
+    color: var(--text-medium);
+  }
+
+  .lp-result-name {
+    color: var(--text-dark);
+    text-decoration: none;
+    transition: color var(--transition-smooth);
+  }
+  .lp-result-name:hover {
+    color: var(--slate-blue);
+  }
+
+  .lp-result-link {
+    display: inline-block;
+    margin-top: 12px;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--slate-blue);
+  }
+
+  /* ==================== PRICING ==================== */
+  .lp-pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-top: 48px;
+  }
+
+  .lp-price-card {
+    background: var(--off-white);
+    padding: 32px 24px;
+    border-radius: 12px;
+    border: 2px solid transparent;
+    text-align: center;
+    position: relative;
+    transition: all var(--transition-smooth);
+  }
+
+  .lp-price-card:hover {
+    border-color: var(--slate-blue);
+    box-shadow: var(--shadow-medium);
+  }
+
+  .lp-price-featured {
+    background: var(--slate-blue);
+    color: var(--white);
+    transform: scale(1.04);
+    border-color: var(--slate-blue);
+  }
+
+  .lp-price-featured:hover {
+    transform: scale(1.06);
+  }
+
+  .lp-price-tag {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--warm-gold);
+    color: var(--text-dark);
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 4px 16px;
+    border-radius: 20px;
+    white-space: nowrap;
+  }
+
+  .lp-price-card h3 {
+    font-size: 20px;
+    margin-bottom: 8px;
+  }
+
+  .lp-price-featured h3 {
+    color: var(--white);
+  }
+
+  .lp-price {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 42px;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 24px;
+  }
+
+  .lp-price span {
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--text-medium);
+  }
+
+  .lp-price-featured .lp-price {
+    color: var(--white);
+  }
+
+  .lp-price-featured .lp-price span {
+    color: rgba(255, 255, 255, 0.7);
+  }
+
+  .lp-price-features {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+  }
+
+  .lp-price-features li {
+    padding: 10px 0;
+    font-size: 14px;
+    color: var(--text-medium);
+    border-bottom: 1px solid var(--border-light);
+    padding-left: 24px;
+    position: relative;
+  }
+
+  .lp-price-features li::before {
+    content: '\2713';
+    position: absolute;
+    left: 0;
+    color: var(--slate-blue);
+    font-weight: 700;
+  }
+
+  .lp-price-features li:last-child {
+    border-bottom: none;
+  }
+
+  .lp-price-featured .lp-price-features li {
+    color: rgba(255, 255, 255, 0.8);
+    border-bottom-color: rgba(255, 255, 255, 0.15);
+  }
+
+  .lp-price-featured .lp-price-features li::before {
+    color: var(--warm-gold);
+  }
+
+  .lp-pricing-note {
+    text-align: center;
+    font-size: 15px;
+    color: var(--text-light);
+    margin-top: 32px;
+    margin-bottom: 0;
+  }
+
+  /* ==================== FAQ ==================== */
+  .lp-faq-list {
+    max-width: 800px;
+    margin-top: 40px;
+  }
+
+  /* ==================== ABOUT ==================== */
+  .lp-about-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 60px;
+    align-items: center;
+  }
+
+  .lp-about-content p {
+    font-size: 17px;
+    line-height: 1.8;
+  }
+
+  .lp-about-content a {
+    color: var(--slate-blue);
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+
+  .lp-photo-placeholder {
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    background: linear-gradient(135deg, var(--slate-blue), var(--slate-blue-dark));
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 18px;
+    font-weight: 600;
+    text-align: center;
+    line-height: 1.4;
+  }
+
+  /* ==================== CONTACT ==================== */
+  .lp-contact-wrap {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .lp-contact-wrap .section-label {
+    display: block;
+  }
+
+  .lp-contact-wrap .lp-section-intro {
+    margin-bottom: 32px;
+  }
+
+  .lp-contact-actions {
+    margin-bottom: 24px;
+  }
+
+  .lp-contact-note {
+    font-size: 14px;
+    color: var(--text-light);
+    font-style: italic;
+    margin: 0;
+  }
+
+  /* ==================== RESPONSIVE ==================== */
+  @media (max-width: 1100px) {
+    .lp-pricing-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .lp-price-featured {
+      transform: none;
+    }
+    .lp-price-featured:hover {
+      transform: none;
+    }
+  }
+
+  @media (max-width: 968px) {
+    .lp-hero {
+      padding: 80px 0 100px;
+    }
+
+    .lp-hero h1 {
+      font-size: 40px;
+    }
+
+    .lp-hero-sub {
+      font-size: 18px;
+    }
+
+    .lp-diff-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .lp-services-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .lp-results-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .lp-about-grid {
+      grid-template-columns: 1fr;
+      gap: 40px;
+    }
+
+    .lp-about-photo {
+      order: -1;
+      max-width: 300px;
+      margin: 0 auto;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .lp-hero {
+      padding: 60px 0 80px;
+    }
+
+    .lp-hero h1 {
+      font-size: 34px;
+    }
+
+    .lp-hero h1 br {
+      display: none;
+    }
+
+    .lp-services-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .lp-pricing-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .lp-hero {
+      padding: 48px 0 60px;
+    }
+
+    .lp-hero h1 {
+      font-size: 30px;
+    }
+
+    .lp-hero-actions {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 16px;
+    }
+
+    .lp-diff-card {
+      padding: 24px;
+    }
+
+    .lp-service-card {
+      padding: 24px;
+    }
+  }
+</style>

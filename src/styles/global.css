@@ -1,0 +1,298 @@
+/* ========================================
+   Leakproof Marketing — Global Styles
+   ======================================== */
+
+/* ---------- Reset ---------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ---------- Design Tokens ---------- */
+:root {
+  --slate-blue: #4A6FA5;
+  --slate-blue-dark: #3B5A87;
+  --slate-blue-light: #5A7FB5;
+  --warm-gold: #D4A843;
+  --warm-gold-light: #E8C96A;
+  --warm-gold-dark: #B8922E;
+  --off-white: #F8F7F4;
+  --white: #FFFFFF;
+  --text-dark: #2B2B2B;
+  --text-medium: #5A5A5A;
+  --text-light: #8A8A8A;
+  --border-light: #E8E8E8;
+
+  --shadow-soft: 0 2px 8px rgba(0, 0, 0, 0.04);
+  --shadow-medium: 0 4px 16px rgba(0, 0, 0, 0.08);
+  --shadow-lift: 0 8px 24px rgba(0, 0, 0, 0.12);
+  --transition-smooth: 0.3s ease;
+}
+
+/* ---------- Skip to Content ---------- */
+.skip-to-content {
+  position: absolute;
+  top: -100%;
+  left: 16px;
+  background: var(--slate-blue);
+  color: var(--white);
+  padding: 12px 24px;
+  border-radius: 0 0 8px 8px;
+  z-index: 1000;
+  font-weight: 600;
+  text-decoration: none;
+  transition: top 0.2s ease;
+}
+.skip-to-content:focus {
+  top: 0;
+}
+
+/* ---------- Base Typography ---------- */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 18px;
+  line-height: 1.7;
+  color: var(--text-dark);
+  background: var(--white);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--text-dark);
+  letter-spacing: -0.5px;
+}
+
+h1 { font-size: 56px; }
+h2 { font-size: 42px; }
+h3 { font-size: 28px; }
+h4 { font-size: 22px; }
+
+p {
+  margin-bottom: 1em;
+  color: var(--text-medium);
+}
+
+a {
+  color: var(--slate-blue);
+  text-decoration: none;
+  transition: color var(--transition-smooth);
+}
+a:hover {
+  color: var(--slate-blue-dark);
+}
+
+strong {
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ---------- Layout ---------- */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.text-container {
+  max-width: 800px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* ---------- Section Spacing ---------- */
+section {
+  padding: 100px 0;
+}
+
+.bg-white {
+  background: var(--white);
+}
+
+.bg-off-white {
+  background: var(--off-white);
+}
+
+/* ---------- Section Label ---------- */
+.section-label {
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  color: var(--warm-gold-dark);
+  margin-bottom: 16px;
+  display: block;
+}
+
+/* ---------- Buttons ---------- */
+.btn-primary {
+  display: inline-block;
+  background: var(--slate-blue);
+  color: var(--white);
+  padding: 16px 36px;
+  border-radius: 8px;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: all var(--transition-smooth);
+}
+.btn-primary:hover {
+  background: var(--slate-blue-dark);
+  color: var(--white);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-medium);
+}
+
+.btn-secondary {
+  display: inline-block;
+  background: transparent;
+  color: var(--text-dark);
+  padding: 16px 36px;
+  border-radius: 8px;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  border: 2px solid var(--text-dark);
+  cursor: pointer;
+  transition: all var(--transition-smooth);
+}
+.btn-secondary:hover {
+  background: var(--text-dark);
+  color: var(--white);
+  transform: translateY(-1px);
+}
+
+.btn-gold {
+  display: inline-block;
+  background: var(--warm-gold);
+  color: var(--text-dark);
+  padding: 16px 36px;
+  border-radius: 8px;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: all var(--transition-smooth);
+}
+.btn-gold:hover {
+  background: var(--warm-gold-dark);
+  color: var(--white);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-medium);
+}
+
+/* ---------- FAQ Accordion ---------- */
+details.faq-item {
+  border-bottom: 1px solid var(--border-light);
+  padding: 0;
+}
+
+details.faq-item summary {
+  padding: 24px 0;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--text-dark);
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  transition: color var(--transition-smooth);
+}
+
+details.faq-item summary::-webkit-details-marker {
+  display: none;
+}
+
+details.faq-item summary::after {
+  content: '+';
+  font-size: 24px;
+  font-weight: 400;
+  color: var(--slate-blue);
+  flex-shrink: 0;
+  transition: transform var(--transition-smooth);
+}
+
+details.faq-item[open] summary::after {
+  content: '-';
+}
+
+details.faq-item summary:hover {
+  color: var(--slate-blue);
+}
+
+.faq-answer {
+  padding: 0 0 24px;
+  color: var(--text-medium);
+  line-height: 1.8;
+  max-width: 800px;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 968px) {
+  .container {
+    padding: 0 24px;
+  }
+
+  section {
+    padding: 72px 0;
+  }
+
+  h1 { font-size: 40px; }
+  h2 { font-size: 34px; }
+  h3 { font-size: 24px; }
+}
+
+@media (max-width: 768px) {
+  section {
+    padding: 60px 0;
+  }
+
+  h1 { font-size: 34px; }
+  h2 { font-size: 28px; }
+  h3 { font-size: 22px; }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 20px;
+  }
+
+  section {
+    padding: 48px 0;
+  }
+
+  h1 { font-size: 30px; }
+  h2 { font-size: 26px; }
+
+  body {
+    font-size: 16px;
+  }
+}
