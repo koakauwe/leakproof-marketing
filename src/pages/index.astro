@@ -31,8 +31,12 @@ const faqSchema = [
     answer: "It means we only work with one practice of your type in your geographic area. If you're a pelvic floor PT in Austin, we won't take on another pelvic floor PT in Austin. Your marketing strategy shouldn't compete against itself.",
   },
   {
-    question: "I'm not sure I need all of this. Can I start small?",
-    answer: "Absolutely. The Starter tier at $300 per month is designed for practices that just need a solid website and basic upkeep. You can always add more later as your practice grows.",
+    question: "Why don't you list pricing on your website?",
+    answer: "Because we don't sell off-the-shelf packages. Every practice is different — your market, your current website, your goals, your timeline — and the work we'd do for you is priced to match. When we hop on a call, we'll understand what you actually need and give you a clear proposal. If we're not the right fit for you, we'll tell you that too and recommend someone who is.",
+  },
+  {
+    question: "What if I only need help with one thing?",
+    answer: "Start the conversation and tell us. We build engagements around what a practice actually needs. If that's just a new website, a Google Ads audit, or monthly content — we'll tell you honestly whether we're the right fit for that scope, what it would look like, and what it would cost.",
   },
 ];
 ---
@@ -180,60 +184,37 @@ const faqSchema = [
     </div>
   </section>
 
-  <!-- ==================== PRICING ==================== -->
-  <section class="bg-white" id="pricing">
+  <!-- ==================== HOW WE WORK ==================== -->
+  <section class="bg-white" id="approach">
     <div class="container">
       <div class="text-container text-center" style="margin: 0 auto;">
-        <span class="section-label">Simple Pricing</span>
-        <h2>No Surprises. No Contracts. No Hidden Fees.</h2>
-        <p class="lp-section-intro">Every engagement starts with a <strong>$1,000 onboarding fee</strong> that covers your website rebuild and initial SEO setup. Then pick the monthly tier that fits. Every tier is <strong>fully managed</strong> &mdash; no admin panel for you to learn, no tools to maintain. You send requests, we deliver.</p>
+        <span class="section-label">How We Work</span>
+        <h2>We Don't Sell Packages. We Build Partnerships.</h2>
+        <p class="lp-section-intro">Your practice isn't a template and neither is our engagement. Before we talk numbers, we talk about what your practice actually needs to grow &mdash; and whether we're the right people to help you get there.</p>
       </div>
-      <div class="lp-pricing-grid">
-        <div class="lp-price-card">
-          <h3>Starter</h3>
-          <div class="lp-price">$300<span>/mo</span></div>
-          <ul class="lp-price-features">
-            <li>Website maintenance & updates</li>
-            <li>Monthly content updates</li>
-            <li>Google Business Profile posts</li>
-            <li>Monthly performance check-in</li>
-          </ul>
+      <div class="lp-approach-grid">
+        <div class="lp-approach-step">
+          <span class="lp-step-num">01</span>
+          <h3>We Have a Real Conversation</h3>
+          <p>Thirty minutes on a call. You tell us about your practice, your patients, what's working, what's frustrating, and where you want to be in a year. No pitch deck, no hard sell.</p>
         </div>
-        <div class="lp-price-card lp-price-featured">
-          <div class="lp-price-tag">Most Popular</div>
-          <h3>Growth</h3>
-          <div class="lp-price">$500<span>/mo</span></div>
-          <ul class="lp-price-features">
-            <li>Everything in Starter</li>
-            <li>Weekly blog posts (4/month)</li>
-            <li>Weekly GBP posts</li>
-            <li>Ongoing SEO optimization</li>
-          </ul>
+        <div class="lp-approach-step">
+          <span class="lp-step-num">02</span>
+          <h3>We Assess Honestly</h3>
+          <p>We look at your website, your search visibility, your local market, and your current marketing. Then we tell you the truth about what we think is needed &mdash; even if it's less than what your current agency is billing for.</p>
         </div>
-        <div class="lp-price-card">
-          <h3>Accelerate</h3>
-          <div class="lp-price">$900<span>/mo</span></div>
-          <ul class="lp-price-features">
-            <li>Everything in Growth</li>
-            <li>Google Ads management</li>
-            <li>Keyword research & strategy</li>
-            <li>Monthly ad performance reports</li>
-          </ul>
-        </div>
-        <div class="lp-price-card">
-          <h3>Full Service</h3>
-          <div class="lp-price">$1,500<span>/mo</span></div>
-          <ul class="lp-price-features">
-            <li>Everything in Accelerate</li>
-            <li>Monthly video production</li>
-            <li>Social media clips & editing</li>
-            <li>Priority support</li>
-          </ul>
+        <div class="lp-approach-step">
+          <span class="lp-step-num">03</span>
+          <h3>We Tell You If We're a Fit</h3>
+          <p>If we're the right partner for what you need, we'll put together a proposal tailored to your goals. If we're not &mdash; if you need something we don't do, or a different approach &mdash; we'll say so and recommend someone who is.</p>
         </div>
       </div>
-      <p class="lp-pricing-note">Ad spend is separate from management fees. We'll recommend a budget based on your market.</p>
-      <div class="text-center" style="margin-top: 32px;">
-        <a href="#contact" class="btn-secondary">Not sure which tier? Let's talk.</a>
+      <div class="lp-approach-footer">
+        <p><strong>The kinds of things we build into engagements:</strong> custom websites on a static framework, dedicated condition landing pages, local search optimization, Google Ads for healthcare (with the privacy rules that apply), content strategy and ongoing publishing, Google Business Profile management, and video production for practices that want to show up in front of their communities authentically.</p>
+        <p class="lp-approach-note">Every engagement is fully managed. You don't touch a dashboard, you don't learn a tool. You send requests, we deliver.</p>
+      </div>
+      <div class="text-center" style="margin-top: 40px;">
+        <a href="#contact" class="btn-primary">Start the Conversation</a>
       </div>
     </div>
   </section>
@@ -553,7 +534,65 @@ const faqSchema = [
     color: var(--slate-blue);
   }
 
-  /* ==================== PRICING ==================== */
+  /* ==================== HOW WE WORK ==================== */
+  .lp-approach-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+    margin-top: 56px;
+  }
+
+  .lp-approach-step {
+    background: var(--off-white);
+    padding: 40px 32px 36px;
+    border-radius: 14px;
+    border-top: 4px solid var(--slate-blue);
+    position: relative;
+  }
+
+  .lp-step-num {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 42px;
+    font-weight: 700;
+    color: var(--warm-gold);
+    line-height: 1;
+    display: block;
+    margin-bottom: 12px;
+    letter-spacing: -1px;
+  }
+
+  .lp-approach-step h3 {
+    font-size: 22px;
+    margin-bottom: 12px;
+  }
+
+  .lp-approach-step p {
+    font-size: 16px;
+    line-height: 1.7;
+    color: var(--text-medium);
+    margin: 0;
+  }
+
+  .lp-approach-footer {
+    max-width: 820px;
+    margin: 56px auto 0;
+    text-align: center;
+  }
+
+  .lp-approach-footer p {
+    font-size: 17px;
+    line-height: 1.7;
+    color: var(--text-medium);
+  }
+
+  .lp-approach-note {
+    font-size: 15px !important;
+    color: var(--text-light) !important;
+    font-style: italic;
+    margin-top: 8px !important;
+  }
+
+  /* ==================== PRICING (kept for backward compat, unused) ==================== */
   .lp-pricing-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -757,6 +796,14 @@ const faqSchema = [
     }
     .lp-price-featured:hover {
       transform: none;
+    }
+
+    .lp-approach-grid {
+      grid-template-columns: 1fr;
+      gap: 20px;
+      max-width: 640px;
+      margin-left: auto;
+      margin-right: auto;
     }
   }
 
