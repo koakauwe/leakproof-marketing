@@ -50,15 +50,124 @@ const faqSchema = [
   <!-- ==================== HERO ==================== -->
   <section class="lp-hero" id="hero">
     <div class="container">
-      <div class="lp-hero-content">
-        <span class="lp-hero-badge">Marketing for Healthcare Practices</span>
-        <h1>Your Patients Are Looking for You.<br />They Just Can't Find You.</h1>
-        <p class="lp-hero-sub">We help pelvic floor PTs and counselors get found online — with websites, SEO, and Google Ads built for your world.</p>
-        <div class="lp-hero-actions">
-          <a href="#contact" class="btn-gold">Book a Free Strategy Call</a>
-          <a href="#services" class="lp-hero-link">See What We Do &darr;</a>
+      <div class="lp-hero-grid">
+        <div class="lp-hero-content">
+          <span class="lp-hero-badge">Marketing for Healthcare Practices</span>
+          <h1>Your Patients Are Looking for You.<br />They Just Can't Find You.</h1>
+          <p class="lp-hero-sub">We help pelvic floor PTs and counselors get found online with websites, SEO, and Google Ads built for your world.</p>
+          <div class="lp-hero-actions">
+            <a href="#contact" class="btn-gold">Book a Free Strategy Call</a>
+            <a href="#services" class="lp-hero-link">See What We Do &darr;</a>
+          </div>
+          <p class="lp-hero-note">One client per market. No competing against ourselves.</p>
         </div>
-        <p class="lp-hero-note">One client per market. No competing against ourselves.</p>
+
+        <!-- Pipes illustration: revenue leaks being plugged by Leakproof -->
+        <div class="lp-hero-illustration" aria-hidden="true">
+          <svg viewBox="0 0 520 540" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Marketing pipes leaking revenue, sealed with Leakproof patches">
+            <defs>
+              <linearGradient id="pipe-grad" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#FFFFFF"/>
+                <stop offset="1" stop-color="#E8EDF5"/>
+              </linearGradient>
+              <linearGradient id="pipe-shadow" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#A8B5CC"/>
+                <stop offset="1" stop-color="#6E7C99"/>
+              </linearGradient>
+              <filter id="pipe-soft" x="-20%" y="-20%" width="140%" height="140%">
+                <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.18"/>
+              </filter>
+              <filter id="patch-glow">
+                <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#D4A843" flood-opacity="0.45"/>
+              </filter>
+            </defs>
+
+            <!-- ================== MAIN VERTICAL PIPE (trunk) ================== -->
+            <g filter="url(#pipe-soft)">
+              <!-- Pipe body -->
+              <rect x="60" y="20" width="50" height="500" rx="6" fill="url(#pipe-grad)"/>
+              <!-- Top cap -->
+              <rect x="50" y="14" width="70" height="18" rx="3" fill="url(#pipe-shadow)"/>
+              <!-- Inner highlight -->
+              <rect x="68" y="20" width="6" height="500" rx="3" fill="#FFFFFF" opacity="0.9"/>
+            </g>
+
+            <!-- ================== BRANCH 1: "Lost Leads" — STILL LEAKING ================== -->
+            <g filter="url(#pipe-soft)">
+              <!-- T-joint -->
+              <rect x="100" y="82" width="32" height="36" fill="url(#pipe-shadow)" rx="3"/>
+              <!-- Horizontal pipe -->
+              <rect x="110" y="86" width="170" height="28" rx="4" fill="url(#pipe-grad)"/>
+              <!-- Open end (leaking) -->
+              <rect x="270" y="80" width="24" height="40" rx="3" fill="url(#pipe-shadow)"/>
+            </g>
+            <!-- Drips -->
+            <circle cx="285" cy="135" r="5" fill="#D4A843" opacity="0.9"/>
+            <ellipse cx="285" cy="155" rx="4" ry="6" fill="#D4A843" opacity="0.7"/>
+            <circle cx="280" cy="178" r="3" fill="#D4A843" opacity="0.5"/>
+            <!-- Label -->
+            <g>
+              <rect x="310" y="85" width="170" height="32" rx="16" fill="#1F2937" stroke="#D4A843" stroke-width="2"/>
+              <text x="395" y="106" font-family="Inter, sans-serif" font-size="14" font-weight="600" fill="#FFFFFF" text-anchor="middle">Lost Leads</text>
+            </g>
+
+            <!-- ================== BRANCH 2: "Poor SEO" — PATCHED ================== -->
+            <g filter="url(#pipe-soft)">
+              <rect x="100" y="190" width="32" height="36" fill="url(#pipe-shadow)" rx="3"/>
+              <rect x="110" y="194" width="170" height="28" rx="4" fill="url(#pipe-grad)"/>
+              <rect x="270" y="188" width="24" height="40" rx="3" fill="url(#pipe-shadow)"/>
+            </g>
+            <!-- Patch (sealed) -->
+            <g filter="url(#patch-glow)">
+              <rect x="262" y="180" width="42" height="56" rx="8" fill="#D4A843"/>
+              <rect x="266" y="184" width="34" height="48" rx="5" fill="#B8922E"/>
+              <text x="283" y="206" font-family="Space Grotesk, sans-serif" font-size="9" font-weight="700" fill="#FFFFFF" text-anchor="middle">LEAK</text>
+              <text x="283" y="218" font-family="Space Grotesk, sans-serif" font-size="9" font-weight="700" fill="#FFFFFF" text-anchor="middle">PROOF</text>
+            </g>
+            <!-- Label (sealed style) -->
+            <g>
+              <rect x="320" y="193" width="170" height="32" rx="16" fill="#D4A843"/>
+              <text x="405" y="214" font-family="Inter, sans-serif" font-size="14" font-weight="700" fill="#1F2937" text-anchor="middle">Poor SEO</text>
+              <!-- Checkmark -->
+              <path d="M 333 209 l 4 4 l 7 -7" stroke="#1F2937" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+            </g>
+
+            <!-- ================== BRANCH 3: "Slow Site" — STILL LEAKING ================== -->
+            <g filter="url(#pipe-soft)">
+              <rect x="100" y="298" width="32" height="36" fill="url(#pipe-shadow)" rx="3"/>
+              <rect x="110" y="302" width="170" height="28" rx="4" fill="url(#pipe-grad)"/>
+              <rect x="270" y="296" width="24" height="40" rx="3" fill="url(#pipe-shadow)"/>
+            </g>
+            <circle cx="285" cy="350" r="5" fill="#D4A843" opacity="0.9"/>
+            <ellipse cx="285" cy="370" rx="4" ry="6" fill="#D4A843" opacity="0.7"/>
+            <circle cx="280" cy="392" r="3" fill="#D4A843" opacity="0.5"/>
+            <g>
+              <rect x="310" y="301" width="170" height="32" rx="16" fill="#1F2937" stroke="#D4A843" stroke-width="2"/>
+              <text x="395" y="322" font-family="Inter, sans-serif" font-size="14" font-weight="600" fill="#FFFFFF" text-anchor="middle">Slow Site</text>
+            </g>
+
+            <!-- ================== BRANCH 4: "Generic Agency" — PATCHED ================== -->
+            <g filter="url(#pipe-soft)">
+              <rect x="100" y="406" width="32" height="36" fill="url(#pipe-shadow)" rx="3"/>
+              <rect x="110" y="410" width="170" height="28" rx="4" fill="url(#pipe-grad)"/>
+              <rect x="270" y="404" width="24" height="40" rx="3" fill="url(#pipe-shadow)"/>
+            </g>
+            <g filter="url(#patch-glow)">
+              <rect x="262" y="396" width="42" height="56" rx="8" fill="#D4A843"/>
+              <rect x="266" y="400" width="34" height="48" rx="5" fill="#B8922E"/>
+              <text x="283" y="422" font-family="Space Grotesk, sans-serif" font-size="9" font-weight="700" fill="#FFFFFF" text-anchor="middle">LEAK</text>
+              <text x="283" y="434" font-family="Space Grotesk, sans-serif" font-size="9" font-weight="700" fill="#FFFFFF" text-anchor="middle">PROOF</text>
+            </g>
+            <g>
+              <rect x="320" y="409" width="170" height="32" rx="16" fill="#D4A843"/>
+              <text x="405" y="430" font-family="Inter, sans-serif" font-size="14" font-weight="700" fill="#1F2937" text-anchor="middle">Generic Agency</text>
+              <path d="M 333 425 l 4 4 l 7 -7" stroke="#1F2937" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+            </g>
+
+            <!-- Bottom cap -->
+            <rect x="50" y="500" width="70" height="18" rx="3" fill="url(#pipe-shadow)" filter="url(#pipe-soft)"/>
+          </svg>
+        </div>
       </div>
     </div>
     <div class="lp-hero-shape" aria-hidden="true"></div>
@@ -364,7 +473,7 @@ const faqSchema = [
   .lp-hero {
     background: linear-gradient(135deg, #4A6FA5 0%, #3B5A87 40%, #2B2B2B 100%);
     color: var(--white);
-    padding: 120px 0 140px;
+    padding: 100px 0 120px;
     position: relative;
     overflow: hidden;
   }
@@ -380,10 +489,42 @@ const faqSchema = [
     pointer-events: none;
   }
 
-  .lp-hero-content {
-    max-width: 720px;
+  .lp-hero-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 56px;
+    align-items: center;
     position: relative;
     z-index: 1;
+  }
+
+  .lp-hero-content {
+    max-width: 620px;
+  }
+
+  .lp-hero-illustration {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  .lp-hero-illustration svg {
+    width: 100%;
+    max-width: 520px;
+    height: auto;
+    display: block;
+    animation: drip 2.4s ease-in-out infinite;
+  }
+
+  @keyframes drip {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-4px); }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .lp-hero-illustration svg {
+      animation: none;
+    }
   }
 
   .lp-hero-badge {
@@ -1028,6 +1169,16 @@ const faqSchema = [
   @media (max-width: 968px) {
     .lp-hero {
       padding: 80px 0 100px;
+    }
+
+    .lp-hero-grid {
+      grid-template-columns: 1fr;
+      gap: 48px;
+    }
+
+    .lp-hero-illustration svg {
+      max-width: 460px;
+      margin: 0 auto;
     }
 
     .lp-hero h1 {
