@@ -52,14 +52,14 @@ const faqSchema = [
     <div class="container">
       <div class="lp-hero-grid">
         <div class="lp-hero-content">
-          <span class="lp-hero-badge">Marketing for Healthcare Practices</span>
-          <h1>Your Patients Are Looking for You.<br />They Just Can't Find You.</h1>
-          <p class="lp-hero-sub">We help pelvic floor PTs and counselors get found online with websites, SEO, and Google Ads built for your world.</p>
+          <span class="lp-hero-badge">Marketing for Pelvic Floor PTs & Counselors</span>
+          <h1>I'm Koa. My Wife Is a Pelvic Floor PT. I Built Her Marketing. I'd Like to Build Yours.</h1>
+          <p class="lp-hero-sub">Leakproof is a small agency for pelvic floor PTs and counselors. We know where your marketing leaks (lost leads, poor SEO, slow sites, generic agency advice) and we know how to seal them. Built from inside the niche.</p>
           <div class="lp-hero-actions">
             <a href="#contact" class="btn-gold">Book a Free Strategy Call</a>
             <a href="#services" class="lp-hero-link">See What We Do &darr;</a>
           </div>
-          <p class="lp-hero-note">One client per market. No competing against ourselves.</p>
+          <p class="lp-hero-note">One practice per market. No competing against ourselves.</p>
         </div>
 
         <!-- Pipes illustration: revenue leaks being plugged by Leakproof -->
@@ -239,6 +239,19 @@ const faqSchema = [
           </div>
           <h3>No Gatekeeping</h3>
           <p>Ask us anything, whether you're a client or not. We'd rather help you succeed on your own than watch you waste money on the wrong agency.</p>
+        </div>
+      </div>
+
+      <!-- Featured callout: built lean for a lean industry -->
+      <div class="lp-margin-callout">
+        <div class="lp-margin-callout-icon" aria-hidden="true">
+          <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M16 2v28M22 7H13a4 4 0 000 8h6a4 4 0 010 8H10"/>
+          </svg>
+        </div>
+        <div class="lp-margin-callout-body">
+          <h3>We Don't Bill You to Learn Your Industry. We Already Know It.</h3>
+          <p>We get how this business runs. Margins are tight, insurance is reimbursing less every year, and your time is the most expensive thing you have. Most agencies pass their learning curve to you in the form of billable hours and slow ramp-up. We skip that part. Leakproof was built knowing healthcare practices run lean, so the agency that serves them has to run lean too.</p>
         </div>
       </div>
     </div>
@@ -626,6 +639,68 @@ const faqSchema = [
     line-height: 1.7;
     color: var(--text-medium);
     margin: 0;
+  }
+
+  /* ==================== MARGIN CALLOUT ==================== */
+  .lp-margin-callout {
+    margin-top: 56px;
+    background: linear-gradient(135deg, var(--slate-blue) 0%, var(--slate-blue-dark) 100%);
+    color: var(--white);
+    border-radius: 16px;
+    padding: 44px 48px;
+    display: grid;
+    grid-template-columns: 72px 1fr;
+    gap: 32px;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    box-shadow: var(--shadow-medium);
+  }
+
+  .lp-margin-callout::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 240px;
+    height: 240px;
+    background: radial-gradient(circle, rgba(212, 168, 67, 0.18) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .lp-margin-callout-icon {
+    width: 72px;
+    height: 72px;
+    background: var(--warm-gold);
+    color: var(--text-dark);
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  .lp-margin-callout-icon svg {
+    width: 38px;
+    height: 38px;
+  }
+
+  .lp-margin-callout-body h3 {
+    font-size: 26px;
+    color: var(--white);
+    margin-bottom: 12px;
+    line-height: 1.25;
+    position: relative;
+    z-index: 1;
+  }
+
+  .lp-margin-callout-body p {
+    font-size: 17px;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.88);
+    margin: 0;
+    max-width: 760px;
+    position: relative;
+    z-index: 1;
   }
 
   /* ==================== SERVICES ==================== */
@@ -1191,6 +1266,25 @@ const faqSchema = [
 
     .lp-diff-grid {
       grid-template-columns: 1fr;
+    }
+
+    .lp-margin-callout {
+      grid-template-columns: 1fr;
+      gap: 20px;
+      padding: 36px 32px;
+      text-align: center;
+    }
+
+    .lp-margin-callout-icon {
+      margin: 0 auto;
+    }
+
+    .lp-margin-callout-body h3 {
+      font-size: 22px;
+    }
+
+    .lp-margin-callout-body p {
+      font-size: 16px;
     }
 
     .lp-services-grid {
