@@ -184,6 +184,9 @@ const faqSchema = [
         <a href="https://lotusrosecounseling.com" target="_blank" rel="noopener" aria-label="Lotus Rose Counseling">
           <img src="/images/lotus-rose-logo.webp" alt="Lotus Rose Counseling" width="180" height="54" loading="lazy" />
         </a>
+        <a href="https://rimrockpodiatry.com" target="_blank" rel="noopener" aria-label="Rimrock Podiatry">
+          <img src="/images/rimrock-logo.png" alt="Rimrock Podiatry" width="180" height="54" loading="lazy" />
+        </a>
         <span class="lp-trust-yours">Yours next?</span>
       </div>
     </div>
@@ -376,6 +379,18 @@ const faqSchema = [
             <li>EMDR and Accelerated Resolution Therapy trained</li>
             <li>Serves Utah County + statewide telehealth</li>
             <li>Custom website, SEO, and analytics underway</li>
+          </ul>
+        </div>
+        <div class="lp-result-card">
+          <div class="lp-result-badge">Active Client</div>
+          <h3><a href="https://rimrockpodiatry.com" target="_blank" rel="noopener" class="lp-result-name">Rimrock Podiatry</a></h3>
+          <p class="lp-result-type">Foot &amp; Ankle Specialists &bull; Billings, Montana</p>
+          <ul class="lp-result-metrics">
+            <li>Four board-certified podiatric surgeons (DPMs)</li>
+            <li>Serving Montana since 1988 &mdash; deep community roots</li>
+            <li>Full-spectrum care: ingrown toenails to ankle reconstruction</li>
+            <li>In-house physical therapy and urgent foot &amp; ankle care</li>
+            <li>Custom website rebuild and content strategy underway</li>
           </ul>
         </div>
         <div class="lp-result-card">
@@ -751,9 +766,18 @@ const faqSchema = [
   /* ==================== RESULTS ==================== */
   .lp-results-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 24px;
     margin-top: 48px;
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @media (min-width: 1100px) {
+    .lp-results-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
   }
 
   .lp-result-card {
